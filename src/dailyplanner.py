@@ -1,7 +1,7 @@
 import requests
 
 def get_weather(api_key, city):
-    base_url = "http://api.openweathermap.org/data/2.5/weather"
+    base_url = "waiting for account to activate"
     params = {
         "q": city,
         "appid": api_key,
