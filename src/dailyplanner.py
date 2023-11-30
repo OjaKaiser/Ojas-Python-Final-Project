@@ -21,7 +21,7 @@ def display_weather(weather_data):
     if weather_data:
         print(f"Weather in {weather_data['name']}, {weather_data['sys']['country']}:")
         print(f"Description: {weather_data['weather'][0]['description']}")
-        print(f"Temperature: {weather_data['main']['temp']}°C")
+        print(f"Temperature: {weather_data['main']['temp']}°F")
         print(f"Humidity: {weather_data['main']['humidity']}%")
         print(f"Wind Speed: {weather_data['wind']['speed']} m/s")
     
