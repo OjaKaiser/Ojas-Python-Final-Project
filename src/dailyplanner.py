@@ -6,6 +6,7 @@ def get_weather(api_key, city):
         "q": city,
         "appid": api_key,
         "units": "imperial"
+        """Set units to imperial or metric based on country if possible"""
     }
 
     response = requests.get(base_url, params=params)
