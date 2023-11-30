@@ -8,7 +8,7 @@ def get_weather(api_key, city):
         "units": "imperial"
     }
 
-     response = requests.get(base_url, params=params)
+    response = requests.get(base_url, params=params)
 
     if response.status_code == 200:
         weather_data = response.json()
@@ -16,6 +16,14 @@ def get_weather(api_key, city):
     else:
         print(f"Error: Unable to fetch weather data. Status code: {response.status_code}")
         return None
+    
+def display_weather(weather_data):
+    if weather_data:
+        print(f"Weather in {weather_data['name']}, {weather_data['sys']['country']}:")
+        print(f"Description: {weather_data['weather'][0]['description']}")
+        print(f"Temperature: {weather_data['main']['temp']}°C")
+        print(f"Humidity: {weather_data['main']['humidity']}%")
+        print(f"Wind Speed: {weather_data['wind']['speed']} m/s")
     
 if __name__ == "__main__":
     api_key = "c9a340caa354b220f863dc4586383dc6"
