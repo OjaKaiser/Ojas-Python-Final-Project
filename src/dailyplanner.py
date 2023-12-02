@@ -54,3 +54,8 @@ if __name__ == "__main__":
 
     weather_data = get_weather(api_key, city)
     display_weather(weather_data)
+
+    outfits = suggest_outfit(weather_data)
+    print("\nOutfit Suggestions:")
+    for suggestion in outfits:
+        print(suggestion)
