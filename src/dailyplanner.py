@@ -25,6 +25,12 @@ def display_weather(weather_data):
         print(f"Temperature: {weather_data['main']['temp']}°F")
         print(f"Humidity: {weather_data['main']['humidity']}%")
         print(f"Wind Speed: {weather_data['wind']['speed']} m/s")
+
+
+def suggest_outfit(weather_data):
+    description = weather_data['weather'][0]['description'].lower()
+    temperature = weather_data['main']['temp']
+
     
 if __name__ == "__main__":
     api_key = "c9a340caa354b220f863dc4586383dc6"
