@@ -31,6 +31,17 @@ def suggest_outfit(weather_data):
     description = weather_data['weather'][0]['description'].lower()
     temperature = weather_data['main']['temp']
 
+    outfit_suggestions = []
+
+    if "rain" in description:
+        outfit_suggestions.append()
+    elif "snow" in description:
+        outfit_suggestions.append()
+    elif "cloud" in description:
+        outfit_suggestions.append()
+    else:
+        outfit_suggestions.append()
+
     
 if __name__ == "__main__":
     api_key = "c9a340caa354b220f863dc4586383dc6"
