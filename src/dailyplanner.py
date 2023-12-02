@@ -42,6 +42,11 @@ def suggest_outfit(weather_data):
     else:
         outfit_suggestions.append()
 
+    if temperature < 50:
+        outfit_suggestions.append()
+    elif temperature > 25:
+        outfit_suggestions.append()
+
     
 if __name__ == "__main__":
     api_key = "c9a340caa354b220f863dc4586383dc6"
