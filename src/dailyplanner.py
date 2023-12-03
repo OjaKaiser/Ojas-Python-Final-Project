@@ -47,6 +47,12 @@ def suggest_outfit(weather_data):
     elif temperature > 25:
         outfit_suggestions.append()
 
+def suggest_activities(weather_data):
+    description = weather_data['weather'][0]['description'].lower()
+    temperature = weather_data['main']['temp']
+
+    activities = []
+
     
 if __name__ == "__main__":
     api_key = "c9a340caa354b220f863dc4586383dc6"
