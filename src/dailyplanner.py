@@ -54,18 +54,18 @@ def suggest_activities(weather_data):
     activities = []
 
     if "rain" in description:
-        activities = []
+        activities = ["Visit a museum", "Watch a movie", "Have a movie marathon", "Read a book", "Play a board game", "Solve a puzzle", "Listen to some music", "Have a home spa day", "Organize or clean your home", "Connect with friends online", "Relax and meditate"]
     elif "snow" in description:
-        activities = []
+        activities = ["Go skiing", "Build a snowman", "Have a snowball fight", "Find a hill to sled down", "Have some hot cocoa and warm treats", "Bake somesomething sweet", "Go on a winter hike", "Watch a movie or show", "Have a snowy photoshoot", "cozy up and read something"]
     elif "cloud" in description:
-        activities = []
+        activities = ["Take a walk in the park", "Go for a hike", "Visit a botanical garden", "Do some photography", "Go on a jog", "Take some time to meditate", "Watch a movie", "Do some home projects", "Visit a museum", "Visit an art gallery"]
     else:
-        activities = []
+        activities = ["Have a picnic", "Play some sports", "Go for a bike ride", "Go on a hike", "Have a barbecue", "Visit a Farmer's market", "Do some photography", "Vist botanical gardens or parks", "Do some bird watching"]
 
     if temperature < 50:
-        activities += []
+        activities += ["Bake cookies", "Have a cozy movie night", "Do indoor exercises"]
     elif temperature > 80:
-        activities += []
+        activities += ["Go swimming", "Have a picnic in the shade", "Play water sports"]
 
 
 def suggest_foods(weather_data):
