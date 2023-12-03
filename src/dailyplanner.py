@@ -132,12 +132,12 @@ if __name__ == "__main__":
     outfits = suggest_outfit(weather_data)
     print("\nOutfit Suggestions:")
     for suggestion in outfits:
-        print(suggestion)
+        print(f"Outfit: {suggestion}")
 
     activities = suggest_activities(weather_data)
     print("\nActivity Suggestions:")
     for suggestion in activities:
-        print(suggestion)
+        print(f"Activity: {suggestion}")
 
     breakfast, lunch, dinner, drink = suggest_meals(weather_data)
     print("\nMeal Suggestions:")
