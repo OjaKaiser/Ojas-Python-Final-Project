@@ -1,3 +1,4 @@
+import random
 import requests
 
 def get_weather(api_key, city):
@@ -108,16 +109,12 @@ def suggest_foods(weather_data):
         dinners = ["BBQ ribs", "Grilled fish", "Vegetable stir-fry", "Chicken Alfredo", "Salmon with lemon dill sauce", "Teriyaki chicken", "Pesto pasta with chicken", "Mango chicken curry", "Caprese pizza", "Garlic butter shrimp pasta"]
         drinks = ["Iced water", "Lemonade", "Iced coffee", "Iced tea", "Fruit-infused water", "Mango smoothie", "Strawberry banana smoothie", "Peach iced tea", "Pineapple coconut smoothie", "Green tea lemonade"]
 
-    if temperature < 50:
-        breakfasts += []
-        lunches += []
-        dinners += []
-        drinks += []
-    elif temperature > 80:
-        breakfasts += []
-        lunches += []
-        dinners += []
-        drinks += []
+
+    breakfast = random.choice(breakfasts)
+    lunch = random.choice(lunches)
+    dinner = random.choice(dinners)
+
+    return breakfast, lunch, dinner
 
 
 
