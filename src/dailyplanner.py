@@ -72,7 +72,9 @@ def suggest_foods(weather_data):
     description = weather_data['weather'][0]['description'].lower()
     temperature = weather_data['main']['temp']
 
-    foods = []
+    breakfasts = []
+    lunches = []
+    dinners = []
 
     if "rain" in description:
         breakfasts = ["Oatmeal", "Pancakes", "French toast", "Eggs Benedict", "Waffles", "Breakfast burrito", "Bagel with cream cheese", "Smoothie bowl", "Avocado toast", "Fruit salad"]
