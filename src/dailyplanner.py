@@ -80,3 +80,8 @@ if __name__ == "__main__":
     print("\nOutfit Suggestions:")
     for suggestion in outfits:
         print(suggestion)
+
+    activities = suggest_activities(weather_data)
+    print("\nActivity Suggestions:")
+    for suggestion in activities:
+        print(suggestion)
