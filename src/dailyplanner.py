@@ -68,6 +68,27 @@ def suggest_activities(weather_data):
         activities += []
 
 
+def suggest_foods(weather_data):
+    description = weather_data['weather'][0]['description'].lower()
+    temperature = weather_data['main']['temp']
+
+    foods = []
+
+    if "rain" in description:
+        foods = []
+    elif "snow" in description:
+        foods = []
+    elif "cloud" in description:
+        foods = []
+    else:
+        foods = []
+
+    if temperature < 10:
+        foods += []
+    elif temperature > 25:
+        foods += []
+
+
     
 if __name__ == "__main__":
     api_key = "c9a340caa354b220f863dc4586383dc6"
