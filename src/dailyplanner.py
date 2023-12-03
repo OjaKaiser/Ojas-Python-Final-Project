@@ -91,20 +91,16 @@ def suggest_foods(weather_data):
         lunches = []
         dinners = []
 
-    if temperature < 10:
+    if temperature < 50:
         breakfasts += []
         lunches += []
         dinners += []
-    elif temperature > 25:
+    elif temperature > 80:
         breakfasts += []
         lunches += []
         dinners += []
 
 
-    if temperature < 10:
-        foods += []
-    elif temperature > 25:
-        foods += []
 
 
     
@@ -124,3 +120,9 @@ if __name__ == "__main__":
     print("\nActivity Suggestions:")
     for suggestion in activities:
         print(suggestion)
+
+    breakfast, lunch, dinner = suggest_meals(weather_data)
+    print("\nMeal Suggestions:")
+    print(f"Breakfast: {breakfast}")
+    print(f"Lunch: {lunch}")
+    print(f"Dinner: {dinner}")
