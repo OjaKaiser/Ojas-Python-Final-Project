@@ -34,13 +34,13 @@ def suggest_outfit(weather_data):
     outfit_suggestions = []
 
     if "rain" in description:
-        outfit_suggestions.append[]
+        outfit_suggestions.append["Bring an umbrella and wear a waterproof jacket and boots."]
     elif "snow" in description:
-        outfit_suggestions.append[]
+        outfit_suggestions.append["Wear a warm coat and boots."]
     elif "cloud" in description:
-        outfit_suggestions.append[]
+        outfit_suggestions.append["A light jacket may be needed."]
     else:
-        outfit_suggestions.append[]
+        outfit_suggestions.append["Make sure to use some sunscreen!"]
 
     if temperature < 50:
         outfit_suggestions.append[]
