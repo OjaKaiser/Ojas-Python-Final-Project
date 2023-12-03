@@ -80,10 +80,10 @@ def suggest_foods(weather_data):
         dinners = ["Chicken noodle soup", "Spaghetti", "Vegetable curry", "Baked ziti", "Stir-fry", "Beef stew", "Chicken Alfredo", "Shrimp scampi", "Chickpea curry", "Mushroom risotto"]
         drinks = ["Hot tea", "Cocoa", "Chai latte", "Mulled wine", "Hot chocolate", "Warm apple cider", "Irish coffee", "Ginger tea", "Mocha", "Spiced chai latte"]
     elif "snow" in description:
-        breakfasts = []
-        lunches = []
-        dinners = []
-        drinks = []
+        breakfasts = ["Porridge", "Waffles", "Eggs Benedict", "Pancakes", "French toast", "Breakfast burrito", "Bagel with cream cheese", "Smoothie bowl", "Avocado toast", "Fruit salad"]
+        lunches = ["Tomato soup", "Baked potatoes", "Beef stew", "Chili", "Chicken pot pie", "Potato soup", "Chicken and rice casserole", "Clam chowder", "Meatball stew", "Shepherd's pie"]
+        dinners = ["Fondue", "Roast chicken", "Beef chili", "Beef stroganoff", "Chicken marsala", "Coq au vin", "Lasagna", "Chicken Parmesan", "Vegetable curry", "Mushroom risotto"]
+        drinks = ["Mulled wine", "Hot chocolate", "Warm apple cider", "Irish coffee", "Peppermint hot chocolate", "Hot toddy", "Eggnog", "Spiced chai latte", "Irish cream coffee", "Caramel apple cider"]
     elif "cloud" in description:
         breakfasts = []
         lunches = []
