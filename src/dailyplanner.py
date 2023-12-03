@@ -79,6 +79,8 @@ def suggest_activities(weather_data):
     elif temperature > 80:
         activities += ["Go swimming", "Have a picnic in the shade", "Play water sports"]
 
+    suggested_activities = random.choice(activities)
+
 
 def suggest_foods(weather_data):
     description = weather_data['weather'][0]['description'].lower()
@@ -113,6 +115,7 @@ def suggest_foods(weather_data):
     breakfast = random.choice(breakfasts)
     lunch = random.choice(lunches)
     dinner = random.choice(dinners)
+    drink = random.choice(drinks)
 
     return breakfast, lunch, dinner
 
@@ -142,3 +145,4 @@ if __name__ == "__main__":
     print(f"Breakfast: {breakfast}")
     print(f"Lunch: {lunch}")
     print(f"Dinner: {dinner}")
+    print(f"Drink: {drink}")
