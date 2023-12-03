@@ -75,30 +75,36 @@ def suggest_foods(weather_data):
     foods = []
 
     if "rain" in description:
-        breakfasts = []
-        lunches = []
-        dinners = []
+        breakfasts = ["Oatmeal", "Pancakes", "French toast", "Eggs Benedict", "Waffles", "Breakfast burrito", "Bagel with cream cheese", "Smoothie bowl", "Avocado toast", "Fruit salad"]
+        lunches = ["Soup and sandwich", "Grilled cheese", "Ramen", "Caesar salad", "Caprese sandwich", "Quiche", "BLT sandwich", "Chicken wrap", "Greek salad", "Vegetarian sushi"]
+        dinners = ["Chicken noodle soup", "Spaghetti", "Vegetable curry", "Baked ziti", "Stir-fry", "Beef stew", "Chicken Alfredo", "Shrimp scampi", "Chickpea curry", "Mushroom risotto"]
+        drinks = ["Hot tea", "Cocoa", "Chai latte", "Mulled wine", "Hot chocolate", "Warm apple cider", "Irish coffee", "Ginger tea", "Mocha", "Spiced chai latte"]
     elif "snow" in description:
         breakfasts = []
         lunches = []
         dinners = []
+        drinks = []
     elif "cloud" in description:
         breakfasts = []
         lunches = []
         dinners = []
+        drinks = []
     else:
         breakfasts = []
         lunches = []
         dinners = []
+        drinks = []
 
     if temperature < 50:
         breakfasts += []
         lunches += []
         dinners += []
+        drinks += []
     elif temperature > 80:
         breakfasts += []
         lunches += []
         dinners += []
+        drinks += []
 
 
 
