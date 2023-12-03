@@ -90,10 +90,10 @@ def suggest_foods(weather_data):
         dinners = ["Pasta with pesto", "Stir-fry", "Vegetarian curry", "Baked salmon", "Caprese pasta", "Vegetable stir-fry", "Ratatouille", "Margherita pizza", "Chickpea and spinach curry", "Mushroom risotto"]
         drinks = ["Iced tea", "Smoothie", "Cold brew coffee", "Lemonade", "Iced coffee", "Fruit-infused water", "Green tea lemonade", "Mango smoothie", "Peach iced tea", "Strawberry banana smoothie"]
     else:
-        breakfasts = []
-        lunches = []
-        dinners = []
-        drinks = []
+        breakfasts = ["Fruit salad", "Smoothie bowl", "Eggs and bacon", "Pancakes", "French toast", "Breakfast burrito", "Bagel with cream cheese", "Yogurt with granola", "Frittata", "Avocado toast"]
+        lunches = ["Grilled chicken salad", "Wrap", "Sushi", "Caesar salad", "Caprese sandwich", "Quinoa salad", "Greek salad", "Cobb salad", "Shrimp sushi rolls", "Chicken Caesar wrap"]
+        dinners = ["BBQ ribs", "Grilled fish", "Vegetable stir-fry", "Chicken Alfredo", "Salmon with lemon dill sauce", "Teriyaki chicken", "Pesto pasta with chicken", "Mango chicken curry", "Caprese pizza", "Garlic butter shrimp pasta"]
+        drinks = ["Iced water", "Lemonade", "Iced coffee", "Iced tea", "Fruit-infused water", "Mango smoothie", "Strawberry banana smoothie", "Peach iced tea", "Pineapple coconut smoothie", "Green tea lemonade"]
 
     if temperature < 50:
         breakfasts += []
