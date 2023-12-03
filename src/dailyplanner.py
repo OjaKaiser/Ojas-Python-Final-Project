@@ -34,18 +34,18 @@ def suggest_outfit(weather_data):
     outfit_suggestions = []
 
     if "rain" in description:
-        outfit_suggestions.append()
+        outfit_suggestions.append[]
     elif "snow" in description:
-        outfit_suggestions.append()
+        outfit_suggestions.append[]
     elif "cloud" in description:
-        outfit_suggestions.append()
+        outfit_suggestions.append[]
     else:
-        outfit_suggestions.append()
+        outfit_suggestions.append[]
 
     if temperature < 50:
-        outfit_suggestions.append()
+        outfit_suggestions.append[]
     elif temperature > 80:
-        outfit_suggestions.append()
+        outfit_suggestions.append[]
 
 def suggest_activities(weather_data):
     description = weather_data['weather'][0]['description'].lower()
