@@ -43,9 +43,16 @@ def suggest_outfit(weather_data):
         outfit_suggestions.append["Make sure to use some sunscreen!"]
 
     if temperature < 50:
-        outfit_suggestions.append[]
+        outfit_suggestions.append["Wear a sweater layered over a long-sleeved shirt or blouse, paired with jeans or trousers and ankle boots", "Try a Puffer vest over a button-up shirt, paired with corduroy pants or leggings and sneakers", 
+                                  "Wear a turtleneck under a wool coat, paired with jeans or a skirt and knee-high boots", "Wear some fleece-lined leggings or thermal pants layered under jeans or a long skirt, paired with a chunky knit sweater and winter boots", 
+                                  "Wear a parka or down jacket over a sweater, paired with insulated pants or jeans and snow boots", "Wear a thermal top under a heavy coat, paired with fleece-lined pants or leggings and insulated waterproof boots"]
     elif temperature > 80:
-        outfit_suggestions.append[]
+        outfit_suggestions.append["Athletic wear like moisture-wicking tank tops and shorts, perfect for outdoor activities, paired with sports sandals or running shoes", "Wear a short sleeved shirt and some some shorts", 
+                                  "Wear some linen pants or culottes paired with a sleeveless top or breezy blouse", "Wear breathable cotton or linen shorts with a loose-fitting tank top or crop top and sandals",]
+    else:
+        outfit_suggestions.append["Wear a light sweater or cardigan paired with jeans or trousers", "Wear a long-sleeved shirt with a lightweight jacket and jeans", 
+                                  "Wear a T-shirt layered with a denim or utility jacket and leggings", "Wear a T-shirt or blouse with jeans or shorts", 
+                                  "Wear shorts or a skirt with a breezy blouse or T-shirt", " Wear linen pants paired with a tank top or a lightweight blouse"]
 
 def suggest_activities(weather_data):
     description = weather_data['weather'][0]['description'].lower()
