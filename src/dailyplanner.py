@@ -75,13 +75,31 @@ def suggest_foods(weather_data):
     foods = []
 
     if "rain" in description:
-        foods = []
+        breakfasts = []
+        lunches = []
+        dinners = []
     elif "snow" in description:
-        foods = []
+        breakfasts = []
+        lunches = []
+        dinners = []
     elif "cloud" in description:
-        foods = []
+        breakfasts = []
+        lunches = []
+        dinners = []
     else:
-        foods = []
+        breakfasts = []
+        lunches = []
+        dinners = []
+
+    if temperature < 10:
+        breakfasts += []
+        lunches += []
+        dinners += []
+    elif temperature > 25:
+        breakfasts += []
+        lunches += []
+        dinners += []
+
 
     if temperature < 10:
         foods += []
