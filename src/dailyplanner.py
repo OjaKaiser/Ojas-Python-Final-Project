@@ -117,7 +117,7 @@ def suggest_foods(weather_data):
     dinner = random.choice(dinners)
     drink = random.choice(drinks)
 
-    return breakfast, lunch, dinner
+    return breakfast, lunch, dinner, drink
 
 
 
