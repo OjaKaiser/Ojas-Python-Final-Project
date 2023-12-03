@@ -58,6 +58,10 @@ def suggest_outfit(weather_data):
         outfit_suggestions.append["Wear a light sweater or cardigan paired with jeans or trousers", "Wear a long-sleeved shirt with a lightweight jacket and jeans", 
                                   "Wear a T-shirt layered with a denim or utility jacket and leggings", "Wear a T-shirt or blouse with jeans or shorts", 
                                   "Wear shorts or a skirt with a breezy blouse or T-shirt", " Wear linen pants paired with a tank top or a lightweight blouse"]
+        
+    suggestion = random.choice(outfit_suggestions)
+
+    return suggestion
 
 def suggest_activities(weather_data):
     description = weather_data['weather'][0]['description'].lower()
@@ -79,10 +83,12 @@ def suggest_activities(weather_data):
     elif temperature > 80:
         activities += ["Go swimming", "Have a picnic in the shade", "Play water sports"]
 
-    suggested_activities = random.choice(activities)
+    suggestion = random.choice(activities)
+
+    return suggestion
 
 
-def suggest_foods(weather_data):
+def suggest_meals(weather_data):
     description = weather_data['weather'][0]['description'].lower()
     temperature = weather_data['main']['temp']
 
