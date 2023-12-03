@@ -35,29 +35,28 @@ def suggest_outfit(weather_data):
     outfit_suggestions = []
 
     if "rain" in description:
-        outfit_suggestions.append["Bring an umbrella and wear a waterproof jacket and boots."]
+        outfit_suggestions = ["Bring an umbrella and wear a waterproof jacket and boots."]
     elif "snow" in description:
-        outfit_suggestions.append["Wear a warm coat and boots."]
+        outfit_suggestions = ["Wear a warm coat and boots."]
     elif "cloud" in description:
-        outfit_suggestions.append["A light jacket may be needed."]
+        outfit_suggestions = ["A light jacket may be needed."]
     else:
-        outfit_suggestions.append["Make sure to use some sunscreen!"]
+        outfit_suggestions = ["Make sure to use some sunscreen!"]
 
     if temperature <32:
-        outfit_suggestions.append["Wear thicker layers like thermal underwear beneath jeans or snow pants, paired with a down-filled coat and heavy-duty snow boots", 
-                                  "Wear a wool or cashmere sweater under a quilted or fur-lined parka, paired with insulated leggings or pants and snow boots", 
-                                  "Wear fleece-lined everything: leggings, tops, and a down-filled jacket, along with snow pants and insulated, waterproof boots"]
+        outfit_suggestions = ["Wear thicker layers like thermal underwear beneath jeans or snow pants, paired with a down-filled coat and heavy-duty snow boots", 
+                            "Wear a wool or cashmere sweater under a quilted or fur-lined parka, paired with insulated leggings or pants and snow boots", 
+                            "Wear fleece-lined everything: leggings, tops, and a down-filled jacket, along with snow pants and insulated, waterproof boots"]
     elif temperature < 50:
-        outfit_suggestions.append["Wear a sweater layered over a long-sleeved shirt or blouse, paired with jeans or trousers and ankle boots", "Try a puffer vest over a button-up shirt, paired with corduroy pants or leggings and sneakers", 
-                                  "Wear a turtleneck under a wool coat, paired with jeans or a skirt and knee-high boots", "Wear some fleece-lined leggings or thermal pants layered under jeans or a long skirt, paired with a chunky knit sweater and winter boots", 
-                                  "Wear a parka or down jacket over a sweater, paired with insulated pants or jeans and snow boots", "Wear a thermal top under a heavy coat, paired with fleece-lined pants or leggings and insulated waterproof boots"]
+        outfit_suggestions = ["Wear a sweater layered over a long-sleeved shirt or blouse, paired with jeans or trousers and ankle boots", "Try a puffer vest over a button-up shirt, paired with corduroy pants or leggings and sneakers", 
+                            "Wear a turtleneck under a wool coat, paired with jeans or a skirt and knee-high boots", "Wear some fleece-lined leggings or thermal pants layered under jeans or a long skirt, paired with a chunky knit sweater and winter boots", 
+                            "Wear a parka or down jacket over a sweater, paired with insulated pants or jeans and snow boots", "Wear a thermal top under a heavy coat, paired with fleece-lined pants or leggings and insulated waterproof boots"]
     elif temperature > 80:
-        outfit_suggestions.append["Athletic wear like moisture-wicking tank tops and shorts, perfect for outdoor activities, paired with sports sandals or running shoes", "Wear a short sleeved shirt and some some shorts", 
-                                  "Wear some linen pants or culottes paired with a sleeveless top or breezy blouse", "Wear breathable cotton or linen shorts with a loose-fitting tank top or crop top and sandals",]
+        outfit_suggestions = ["Wear some linen pants or culottes paired with a sleeveless top or breezy blouse", "Wear breathable cotton or linen shorts with a loose-fitting tank top or crop top and sandals"]
     else:
-        outfit_suggestions.append["Wear a light sweater or cardigan paired with jeans or trousers", "Wear a long-sleeved shirt with a lightweight jacket and jeans", 
-                                  "Wear a T-shirt layered with a denim or utility jacket and leggings", "Wear a T-shirt or blouse with jeans or shorts", 
-                                  "Wear shorts or a skirt with a breezy blouse or T-shirt", " Wear linen pants paired with a tank top or a lightweight blouse"]
+        outfit_suggestions = ["Wear a light sweater or cardigan paired with jeans or trousers", "Wear a long-sleeved shirt with a lightweight jacket and jeans", 
+                            "Wear a T-shirt layered with a denim or utility jacket and leggings", "Wear a T-shirt or blouse with jeans or shorts", 
+                            "Wear shorts or a skirt with a breezy blouse or T-shirt", " Wear linen pants paired with a tank top or a lightweight blouse"]
         
     suggestion = random.choice(outfit_suggestions)
 
