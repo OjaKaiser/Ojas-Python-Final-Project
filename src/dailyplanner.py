@@ -42,8 +42,12 @@ def suggest_outfit(weather_data):
     else:
         outfit_suggestions.append["Make sure to use some sunscreen!"]
 
-    if temperature < 50:
-        outfit_suggestions.append["Wear a sweater layered over a long-sleeved shirt or blouse, paired with jeans or trousers and ankle boots", "Try a Puffer vest over a button-up shirt, paired with corduroy pants or leggings and sneakers", 
+    if temperature <32:
+        outfit_suggestions.append["Wear thicker layers like thermal underwear beneath jeans or snow pants, paired with a down-filled coat and heavy-duty snow boots", 
+                                  "Wear a wool or cashmere sweater under a quilted or fur-lined parka, paired with insulated leggings or pants and snow boots", 
+                                  "Wear fleece-lined everything: leggings, tops, and a down-filled jacket, along with snow pants and insulated, waterproof boots"]
+    elif temperature < 50:
+        outfit_suggestions.append["Wear a sweater layered over a long-sleeved shirt or blouse, paired with jeans or trousers and ankle boots", "Try a puffer vest over a button-up shirt, paired with corduroy pants or leggings and sneakers", 
                                   "Wear a turtleneck under a wool coat, paired with jeans or a skirt and knee-high boots", "Wear some fleece-lined leggings or thermal pants layered under jeans or a long skirt, paired with a chunky knit sweater and winter boots", 
                                   "Wear a parka or down jacket over a sweater, paired with insulated pants or jeans and snow boots", "Wear a thermal top under a heavy coat, paired with fleece-lined pants or leggings and insulated waterproof boots"]
     elif temperature > 80:
