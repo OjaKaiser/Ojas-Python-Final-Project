@@ -143,6 +143,13 @@ def fetch_weather():
 root = tk.Tk()
 root.title("Weather Suggestions")
 
+# API Key input
+api_key_label = tk.Label(root, text="Enter API Key:")
+api_key_label.pack()
+api_key_entry = tk.Entry(root)
+api_key_entry.pack()
+
+
     
 if __name__ == "__main__":
     api_key = "c9a340caa354b220f863dc4586383dc6"
