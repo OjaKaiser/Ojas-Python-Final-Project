@@ -77,6 +77,10 @@ def suggest_activities(weather_data):
     else:
         activities = ["Have a picnic", "Play some sports", "Go for a bike ride", "Go on a hike", "Have a barbecue", "Visit a Farmer's market", "Do some photography", "Vist botanical gardens or parks", "Do some bird watching"]
 
+    suggestion = random.choice(activities)
+
+    return suggestion
+
 def suggest_temperature_activity(weather_data):
     temperature = weather_data['main']['temp']
 
@@ -87,7 +91,7 @@ def suggest_temperature_activity(weather_data):
     elif temperature > 300:
         activities = ["Go swimming", "Have a picnic in the shade", "Play water sports"]
     else:
-        activities = ["Go for a walk", "Visit a park", "Explore the city", "Have a picnic", "Play outdoor sports"]
+        activities = ["Go for a walk", "Visit a park", "Explore the city", "Play outdoor sports"]
 
     suggestion = random.choice(activities)
 
@@ -157,8 +161,11 @@ def fetch_weather():
     outfit = suggest_outfit(weather_data)
     outfit_var.set(f"Outfit: {outfit}")
 
-    activity = suggest_activities(weather_data)
-    activity_var.set(f"Activity: {activity}")
+    weather_activity = suggest_activities(weather_data)
+    activity_var.set(f"Weather Activity: {weather_activity}")
+    
+    temperature_activity = suggest_temperature_activity(weather_data)
+    meal_var.set(f"Temperature Activity: {temperature_activity}")
     
     breakfast, lunch, dinner, drink = suggest_meals(weather_data)
     meal_var.set(f"Breakfast: {breakfast}\nLunch: {lunch}\nDinner: {dinner}\nDrink: {drink}")
