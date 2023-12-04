@@ -1,5 +1,7 @@
 import random
 import requests
+import tkinter as tk
+
 
 def get_weather(api_key, city):
     base_url = "http://api.openweathermap.org/data/2.5/weather"
@@ -119,6 +121,11 @@ def suggest_meals(weather_data):
     drink = random.choice(drinks)
 
     return breakfast, lunch, dinner, drink
+
+def fetch_weather():
+    city = city_entry.get()
+    weather_data = get_weather(city)
+    display_weather(weather_data)
 
 
 
