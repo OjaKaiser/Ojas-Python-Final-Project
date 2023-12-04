@@ -127,8 +127,26 @@ def suggest_meals(weather_data):
 def fetch_weather():
     city = city_entry.get()
     weather_data = get_weather(api_key, city)  # Pass the predefined API key
-    display_weather(weather_data)
+    
+    if weather_data:
+        temperature_kelvin = weather_data['main']['temp']
+        temperature_fahrenheit = (temperature_kelvin - 273.15) * 9/5 + 32
+        weather_desc = weather_data['weather'][0]['description']
+        humidity = weather_data['main']['humidity']
+        wind_speed = weather_data['wind']['speed']
 
+        # Update the labels to display weather information
+        weather_label.config(text=f"Weather: {weather_desc}")
+        temp_label.config(text=f"Temperature: {temperature_fahrenheit:.2f}°F")
+        humidity_label.config(text=f"Humidity: {humidity}%")
+        wind_label.config(text=f"Wind Speed: {wind_speed} m/s")
+    else:
+        # If unable to fetch weather data, display an error message
+        weather_label.config(text="Error fetching weather data")
+        temp_label.config(text="")
+        humidity_label.config(text="")
+        wind_label.config(text="")
+    
     outfit = suggest_outfit(weather_data)
     outfit_var.set(f"Outfit: {outfit}")
 
