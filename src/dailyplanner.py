@@ -68,31 +68,18 @@ def suggest_activities(weather_data):
     activities = []
 
     if "rain" in description:
-        activities = ["Visit a museum", "Watch a movie", "Have a movie marathon", "Read a book", "Play a board game", "Solve a puzzle", "Listen to some music", "Have a home spa day", "Organize or clean your home", "Connect with friends online", "Relax and meditate"]
+        activities = ["Bake cookies", "Have a cozy movie night", "Do indoor exercises", "Visit a museum", "Watch a movie", "Have a movie marathon", "Read a book", "Play a board game", "Solve a puzzle", "Listen to some music", "Have a home spa day", "Organize or clean your home", "Connect with friends online", "Relax and meditate"]
     elif "snow" in description:
-        activities = ["Go skiing", "Build a snowman", "Have a snowball fight", "Find a hill to sled down", "Have some hot cocoa and warm treats", "Bake somesomething sweet", "Go on a winter hike", "Watch a movie or show", "Have a snowy photoshoot", "cozy up and read something"]
+        activities = ["Go skiing", "Build a snowman", "Have a snowball fight", "Bake cookies", "Have a cozy movie night", "Do indoor exercises", "Find a hill to sled down", "Have some hot cocoa and warm treats", "Bake somesomething sweet", "Go on a winter hike", "Watch a movie or show", "Have a snowy photoshoot", "cozy up and read something"]
     elif "cloud" in description:
         activities = ["Take a walk in the park", "Go for a hike", "Visit a botanical garden", "Do some photography", "Go on a jog", "Take some time to meditate", "Watch a movie", "Do some home projects", "Visit a museum", "Visit an art gallery"]
     else:
-        activities = ["Have a picnic", "Play some sports", "Go for a bike ride", "Go on a hike", "Have a barbecue", "Visit a Farmer's market", "Do some photography", "Vist botanical gardens or parks", "Do some bird watching"]
+        activities = ["Have a picnic", "Have a picnic in the shade", "Play some sports", "Go for a bike ride", "Go on a hike", "Have a barbecue", "Visit a Farmer's market", "Do some photography", "Vist botanical gardens or parks", "Do some bird watching"]
 
     suggestion = random.choice(activities)
 
     return suggestion
 
-def suggest_tempactivities(weather_data):
-    temperature = weather_data['main']['temp']
-
-    activities = []
-
-    if temperature < 283:
-        activities += ["Bake cookies", "Have a cozy movie night", "Do indoor exercises"]
-    elif temperature > 300:
-        activities += ["Go swimming", "Have a picnic in the shade", "Play water sports"]
-
-    suggestion = random.choice(activities)
-
-    return suggestion
 
 def suggest_meals(weather_data):
     description = weather_data['weather'][0]['description'].lower()
@@ -158,11 +145,8 @@ def fetch_weather():
     outfit_var.set(f"Outfit: {outfit}")
 
     activity = suggest_activities(weather_data)
-    activity_var.set(f"Activity 1: {activity}")
+    activity_var.set(f"Activity: {activity}")
 
-    tempactivity = suggest_tempactivities(weather_data)
-    tempactivity_var.set(f"Activity 2: {tempactivity}")
-    
     breakfast, lunch, dinner, drink = suggest_meals(weather_data)
     meal_var.set(f"Breakfast: {breakfast}\nLunch: {lunch}\nDinner: {dinner}\nDrink: {drink}")
 
@@ -190,7 +174,6 @@ fetch_button.pack()
 # Output displays
 outfit_var = tk.StringVar()
 activity_var = tk.StringVar()
-tempactivity_var = tk.StringVar()
 meal_var = tk.StringVar()
 
 weather_label = tk.Label(root, text="Weather: ")
@@ -210,9 +193,6 @@ outfit_label.pack()
 
 activity_label = tk.Label(root, textvariable=activity_var)
 activity_label.pack()
-
-tempactivity_label = tk.Label(root, textvariable=tempactivity_var)
-tempactivity_label.pack()
 
 meal_label = tk.Label(root, textvariable=meal_var)
 meal_label.pack()
