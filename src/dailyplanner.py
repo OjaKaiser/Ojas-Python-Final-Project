@@ -77,10 +77,17 @@ def suggest_activities(weather_data):
     else:
         activities = ["Have a picnic", "Play some sports", "Go for a bike ride", "Go on a hike", "Have a barbecue", "Visit a Farmer's market", "Do some photography", "Vist botanical gardens or parks", "Do some bird watching"]
 
+def suggest_temperature_activity(weather_data):
+    temperature = weather_data['main']['temp']
+
+    activities = []
+
     if temperature < 283:
-        activities += ["Bake cookies", "Have a cozy movie night", "Do indoor exercises"]
+        activities = ["Bake cookies", "Have a cozy movie night", "Do indoor exercises"]
     elif temperature > 300:
-        activities += ["Go swimming", "Have a picnic in the shade", "Play water sports"]
+        activities = ["Go swimming", "Have a picnic in the shade", "Play water sports"]
+    else:
+        activities = ["Go for a walk", "Visit a park", "Explore the city", "Have a picnic", "Play outdoor sports"]
 
     suggestion = random.choice(activities)
 
