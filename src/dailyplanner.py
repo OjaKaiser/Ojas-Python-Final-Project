@@ -6,7 +6,7 @@ def get_weather(api_key, city):
     params = {
         "q": city,
         "appid": api_key,
-        "units": "imperial"
+        "units": "kelvin"
         """Set units to imperial or metric based on country if possible"""
     }
 
@@ -43,11 +43,11 @@ def suggest_outfit(weather_data):
     else:
         outfit_suggestions = ["Make sure to use some sunscreen!"]
 
-    if temperature <32:
+    if temperature <273:
         outfit_suggestions = ["Wear thicker layers like thermal underwear beneath jeans or snow pants, paired with a down-filled coat and heavy-duty snow boots", "Wear a wool or cashmere sweater under a quilted or fur-lined parka, paired with insulated leggings or pants and snow boots", "Wear fleece-lined everything: leggings, tops, and a down-filled jacket, along with snow pants and insulated, waterproof boots"]
-    elif temperature < 50:
+    elif temperature < 283:
         outfit_suggestions = ["Wear a sweater layered over a long-sleeved shirt or blouse, paired with jeans or trousers and ankle boots", "Try a puffer vest over a button-up shirt, paired with corduroy pants or leggings and sneakers", "Wear a turtleneck under a wool coat, paired with jeans or a skirt and knee-high boots", "Wear some fleece-lined leggings or thermal pants layered under jeans or a long skirt, paired with a chunky knit sweater and winter boots", "Wear a parka or down jacket over a sweater, paired with insulated pants or jeans and snow boots", "Wear a thermal top under a heavy coat, paired with fleece-lined pants or leggings and insulated waterproof boots"]
-    elif temperature > 80:
+    elif temperature > 300:
         outfit_suggestions = ["Wear some linen pants or culottes paired with a sleeveless top or breezy blouse", "Wear breathable cotton or linen shorts with a loose-fitting tank top or crop top and sandals"]
     else:
         outfit_suggestions = ["Wear a light sweater or cardigan paired with jeans or trousers", "Wear a long-sleeved shirt with a lightweight jacket and jeans", "Wear a T-shirt layered with a denim or utility jacket and leggings", "Wear a T-shirt or blouse with jeans or shorts", "Wear shorts or a skirt with a breezy blouse or T-shirt", " Wear linen pants paired with a tank top or a lightweight blouse"]
@@ -71,9 +71,9 @@ def suggest_activities(weather_data):
     else:
         activities = ["Have a picnic", "Play some sports", "Go for a bike ride", "Go on a hike", "Have a barbecue", "Visit a Farmer's market", "Do some photography", "Vist botanical gardens or parks", "Do some bird watching"]
 
-    if temperature < 50:
+    if temperature < 283:
         activities += ["Bake cookies", "Have a cozy movie night", "Do indoor exercises"]
-    elif temperature > 80:
+    elif temperature > 300:
         activities += ["Go swimming", "Have a picnic in the shade", "Play water sports"]
 
     suggestion = random.choice(activities)
