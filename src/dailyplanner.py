@@ -21,9 +21,11 @@ def get_weather(api_key, city):
     
 def display_weather(weather_data):
     if weather_data:
+        temperature_kelvin = weather_data['main']['temp']
+        temperature_fahrenheit = (temperature_kelvin - 273.15) * 9/5 + 32  # Conversion from Kelvin to Fahrenheit
         print(f"Weather in {weather_data['name']}, {weather_data['sys']['country']}:")
         print(f"Description: {weather_data['weather'][0]['description']}")
-        print(f"Temperature: {weather_data['main']['temp']}°F")
+        print(f"Temperature: {temperature_fahrenheit:.2f}°F")
         print(f"Humidity: {weather_data['main']['humidity']}%")
         print(f"Wind Speed: {weather_data['wind']['speed']} m/s")
 
