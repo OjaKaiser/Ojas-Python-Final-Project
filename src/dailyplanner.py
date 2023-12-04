@@ -85,7 +85,6 @@ def suggest_tempactivities(weather_data):
 
     activities = []
 
-
     if temperature < 283:
         activities += ["Bake cookies", "Have a cozy movie night", "Do indoor exercises"]
     elif temperature > 300:
@@ -191,6 +190,7 @@ fetch_button.pack()
 # Output displays
 outfit_var = tk.StringVar()
 activity_var = tk.StringVar()
+tempactivity_var = tk.StringVar()
 meal_var = tk.StringVar()
 
 weather_label = tk.Label(root, text="Weather: ")
@@ -210,6 +210,9 @@ outfit_label.pack()
 
 activity_label = tk.Label(root, textvariable=activity_var)
 activity_label.pack()
+
+tempactivity_label = tk.Label(root, textvariable=tempactivity_var)
+tempactivity_label.pack()
 
 meal_label = tk.Label(root, textvariable=meal_var)
 meal_label.pack()
