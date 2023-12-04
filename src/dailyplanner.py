@@ -158,6 +158,13 @@ city_entry.pack()
 fetch_button = tk.Button(root, text="Fetch Weather", command=fetch_weather)
 fetch_button.pack()
 
+# Output displays
+outfit_var = tk.StringVar()
+activity_var = tk.StringVar()
+meal_var = tk.StringVar()
+
+
+
     
 if __name__ == "__main__":
     api_key = "c9a340caa354b220f863dc4586383dc6"
