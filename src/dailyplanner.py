@@ -127,7 +127,8 @@ def fetch_weather():
     weather_data = get_weather(city)
     display_weather(weather_data)
 
-
+    outfit = suggest_outfit(weather_data)
+    outfit_var.set(f"Outfit: {outfit}")
 
 
     
