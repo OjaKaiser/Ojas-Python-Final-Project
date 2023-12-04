@@ -151,7 +151,10 @@ def fetch_weather():
     outfit_var.set(f"Outfit: {outfit}")
 
     activity = suggest_activities(weather_data)
-    activity_var.set(f"Activity: {activity}")
+    activity_var.set(f"Activity 1: {activity}")
+
+    tempactivity = suggest_tempactivities(weather_data)
+    activity_var.set(f"Activity 2: {tempactivity}")
     
     breakfast, lunch, dinner, drink = suggest_meals(weather_data)
     meal_var.set(f"Breakfast: {breakfast}\nLunch: {lunch}\nDinner: {dinner}\nDrink: {drink}")
