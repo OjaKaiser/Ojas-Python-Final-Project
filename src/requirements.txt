@@ -1,0 +1,13 @@
+Python: Ensure you have Python installed on your machine.
+
+This code uses Python's tkinter for the interface. It should've already been installed when downloading Python,
+if not reinstall python from the official website and during installation ensure that the checkbox for installing Tcl/Tk and IDLE is checked
+
+Packages: Install the required Python packages using pip. Run: pip install requests
+This will install the requests package required to make API requests. Once you have these in place, you can run the code. 
+Upon running, the code will open up a winder which will prompt you to enter an API key (for OpenWeatherMap) and a city name.
+
+It'll open a window prompting you to enter an API key (for OpenWeatherMap), a city name, and then it will display weather-related information along with suggestions for outfits,
+activities, and meals based on the weather in the entered city.
+Although it asks for an API, you don't have to type it in as it's already built into the code, that box is just there incase the api gets removed.
+You can get a free API from signing up on OpenWeatherMap.org
