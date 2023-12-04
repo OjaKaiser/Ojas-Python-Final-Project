@@ -126,7 +126,7 @@ def suggest_meals(weather_data):
 
 def fetch_weather():
     city = city_entry.get()
-    weather_data = get_weather(city)
+    weather_data = get_weather(api_key, city)  # Pass the predefined API key
     display_weather(weather_data)
 
     outfit = suggest_outfit(weather_data)
@@ -137,6 +137,7 @@ def fetch_weather():
     
     breakfast, lunch, dinner, drink = suggest_meals(weather_data)
     meal_var.set(f"Breakfast: {breakfast}\nLunch: {lunch}\nDinner: {dinner}\nDrink: {drink}")
+
 
 
 # GUI setup
