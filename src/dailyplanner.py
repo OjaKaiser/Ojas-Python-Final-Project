@@ -139,6 +139,9 @@ def fetch_weather():
     meal_var.set(f"Breakfast: {breakfast}\nLunch: {lunch}\nDinner: {dinner}\nDrink: {drink}")
 
 
+# GUI setup
+root = tk.Tk()
+root.title("Weather Suggestions")
 
     
 if __name__ == "__main__":
