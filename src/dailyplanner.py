@@ -149,6 +149,12 @@ api_key_label.pack()
 api_key_entry = tk.Entry(root)
 api_key_entry.pack()
 
+# City input
+city_label = tk.Label(root, text="Enter City:")
+city_label.pack()
+city_entry = tk.Entry(root)
+city_entry.pack()
+
 
     
 if __name__ == "__main__":
