@@ -172,25 +172,4 @@ activity_label.pack()
 meal_label = tk.Label(root, textvariable=meal_var)
 meal_label.pack()
 
-    
-if __name__ == "__main__":
-    api_key = "c9a340caa354b220f863dc4586383dc6"
-    city = input("Enter the city name: ")
-
-    weather_data = get_weather(api_key, city)
-    display_weather(weather_data)
-
-    outfits = suggest_outfit(weather_data)
-    print("\nOutfit Suggestions:")
-    print("Outfit:", outfits)
-
-    activities = suggest_activities(weather_data)
-    print("\nActivity Suggestions:")
-    print("Activity:", activities)
-
-    breakfast, lunch, dinner, drink = suggest_meals(weather_data)
-    print("\nMeal Suggestions:")
-    print(f"Breakfast: {breakfast}")
-    print(f"Lunch: {lunch}")
-    print(f"Dinner: {dinner}")
-    print(f"Drink: {drink}")
+root.mainloop()
