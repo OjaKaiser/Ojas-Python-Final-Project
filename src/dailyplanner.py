@@ -164,6 +164,18 @@ outfit_var = tk.StringVar()
 activity_var = tk.StringVar()
 meal_var = tk.StringVar()
 
+weather_label = tk.Label(root, text="Weather: ")
+weather_label.pack()
+
+temp_label = tk.Label(root, text="Temperature: ")
+temp_label.pack()
+
+humidity_label = tk.Label(root, text="Humidity: ")
+humidity_label.pack()
+
+wind_label = tk.Label(root, text="Wind Speed: ")
+wind_label.pack()
+
 outfit_label = tk.Label(root, textvariable=outfit_var)
 outfit_label.pack()
 
