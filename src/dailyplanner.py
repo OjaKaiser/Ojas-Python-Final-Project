@@ -155,6 +155,8 @@ city_label.pack()
 city_entry = tk.Entry(root)
 city_entry.pack()
 
+fetch_button = tk.Button(root, text="Fetch Weather", command=fetch_weather)
+fetch_button.pack()
 
     
 if __name__ == "__main__":
