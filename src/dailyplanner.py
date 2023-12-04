@@ -163,7 +163,14 @@ outfit_var = tk.StringVar()
 activity_var = tk.StringVar()
 meal_var = tk.StringVar()
 
+outfit_label = tk.Label(root, textvariable=outfit_var)
+outfit_label.pack()
 
+activity_label = tk.Label(root, textvariable=activity_var)
+activity_label.pack()
+
+meal_label = tk.Label(root, textvariable=meal_var)
+meal_label.pack()
 
     
 if __name__ == "__main__":
